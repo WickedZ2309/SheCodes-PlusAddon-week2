@@ -24,6 +24,19 @@ function updateTime() {
       "h:mm:ss [<small>]A[</small>]"
     );
   }
+
+  // Sao Paolo
+  let saoPaoloElement = document.querySelector("#sao-paolo");
+  if (saoPaoloElement) {
+    let saoPaoloDateElement = saoPaoloElement.querySelector(".date");
+    let saoPaoloTimeElement = saoPaoloElement.querySelector(".time");
+    let saoPaoloTime = moment().tz("America/Sao_Paulo");
+
+    saoPaoloDateElement.innerHTML = saoPaoloTime.format("MMMM Do YYYY");
+    saoPaoloTimeElement.innerHTML = saoPaoloTime.format(
+      "h:mm:ss [<small>]A[</small>]"
+    );
+  }
 }
 
 function updateCity(event) {
